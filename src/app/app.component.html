@@ -13,13 +13,8 @@
                 </li>
             </ul>
         </td>
-        <td *ngIf="selectedHero" class="hero-details">
-            <h2>{{ selectedHero.name }} details.</h2>
-            <div><label>id:</label> {{ selectedHero.id }}</div>
-            <div>
-                <label>name: </label>
-                <input [(ngModel)]="selectedHero.name" placeholder="name">
-            </div>
+        <td class="hero-details">
+            <hero-detail [hero]="selectedHero"></hero-detail>
         </td>
     </tr>
 </table>
