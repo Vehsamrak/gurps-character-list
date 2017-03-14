@@ -18,7 +18,7 @@ export class HeroesComponent implements OnInit {
         this.getHeroes();
     }
 
-    onClick(hero: Hero): void {
+    selectHero(hero: Hero): void {
         this.selectedHero = hero;
     }
 
