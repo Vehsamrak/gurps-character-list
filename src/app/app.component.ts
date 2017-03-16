@@ -3,8 +3,8 @@ import { HeroService } from "./Services/hero.service";
 
 @Component({
     selector: 'app',
-    templateUrl: 'app.component.html',
-    styleUrls: ['app.component.css'],
+    templateUrl: 'app.html',
+    styleUrls: ['app.css'],
     providers: [HeroService]
 })
 export class AppComponent {

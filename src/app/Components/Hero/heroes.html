@@ -12,7 +12,12 @@
             </ul>
         </td>
         <td class="hero-details">
-            <hero-detail [hero]="selectedHero"></hero-detail>
+            <div *ngIf="selectedHero">
+                <h2>
+                    {{ selectedHero.name|uppercase }}
+                </h2>
+                <button (click)="gotoDetail()">View Details</button>
+            </div>
         </td>
     </tr>
 </table>
