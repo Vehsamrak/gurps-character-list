@@ -3,6 +3,9 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
+import { InMemoryDataService } from "./Services/in-memory-data.service";
+import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
+
 import { AppComponent } from './app.component';
 import { HeroDetailComponent } from "./Components/HeroDetail/hero-detail.component";
 import { HeroesComponent } from "./Components/Hero/heroes.component";
@@ -20,7 +23,8 @@ import { RoutingModule } from "./routing.module";
         RoutingModule,
         BrowserModule,
         FormsModule,
-        HttpModule
+        HttpModule,
+        InMemoryWebApiModule.forRoot(InMemoryDataService),
     ],
     providers: [],
     bootstrap: [AppComponent]
